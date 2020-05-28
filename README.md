@@ -2,6 +2,8 @@
 
 Based on [https://github.com/coturn/coturn/](official) and [https://github.com/instrumentisto/coturn-docker-image/](instrumentisto) dockerfile to build from sources, and permit command line arguments or execute with default parameters.
 
+Docker hub image repository on [https://hub.docker.com/repository/docker/hzamorano/coturn](https://hub.docker.com/repository/docker/hzamorano/coturn)
+
 ## Added
 
 * Default command expects a config file in /etc/turnserver.conf
