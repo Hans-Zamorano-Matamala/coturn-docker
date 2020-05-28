@@ -1,6 +1,6 @@
 # Docker build for Coturn
 
-Based on [https://github.com/coturn/coturn/](official) and [https://github.com/instrumentisto/coturn-docker-image/](instrumentisto) dockerfile to build from sources, permit command line arguments, or execute with default parameters.
+Based on [https://github.com/coturn/coturn/](official) and [https://github.com/instrumentisto/coturn-docker-image/](instrumentisto) dockerfile to build from sources, and permit command line arguments or execute with default parameters.
 
 ## Added
 
@@ -44,7 +44,7 @@ docker-compose up -d
 
 ## Service testing
 
-You can use Tricle ICE website to test service functionality [https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/]((https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/)):
+You can use Trickle ICE website to test service functionality [https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/]((https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/)):
 
 1. Add your serviceIP:port on "STUN or TURN URI"
 2. Press "Add server"
