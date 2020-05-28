@@ -1,0 +1,53 @@
+version: "3.7"
+services:
+
+  coturn:
+    container_name: coturn
+    image: hzamorano/coturn:4.5.1.2
+    # command: --verbose --realm=CHANGE_ME # Alternative to turnserver.conf
+    volumes:
+      # SQLite database
+      - ./database:/var/lib/coturn
+      # Configuration file
+      - ./turnserver.conf:/etc/turnserver.conf
+      # Certificates
+      # - ./coturn/privkey.pem:/etc/ssl/private/privkey.pem
+      # - ./coturn/cert.pem:/etc/ssl/certs/cert.pem
+    ports:
+      # STUN/TURN
+      - "3478:3478"
+      - "3478:3478/udp"
+      - "3479:3479"
+      - "3479:3479/udp"
+      - "80:80"
+      - "80:80/udp"
+      # STUN/TURN SSL
+      - "5349:5349"
+      - "5349:5349/udp"
+      - "5350:5350"
+      - "5350:5350/udp"
+      - "443:443"
+      - "443:443/udp"
+      # CLI
+      - 5766:5766
+      # Webadmin
+      - 8080:8080
+      # Relay Ports
+      # - "49152-65535:49152-65535"
+      # - "49152-65535:49152-65535/udp"
+    # network_mode: "host"
+    # networks:
+    #   - frontend
+    #   - backend
+    # env_file:
+    #   - coturn/coturn.env
+
+# networks:
+#   frontend:
+#     driver: bridge
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: 172.16.238.0/24
+#   backend:
+#     internal: true
