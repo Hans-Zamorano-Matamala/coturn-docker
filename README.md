@@ -16,7 +16,7 @@ Based on [https://github.com/coturn/coturn/](official) and [https://github.com/i
 docker build -t NAMESPACE/IMAGE_NAME:TAG ./
 ```
 
-Note: This clones the entire git repository, obtaining the latest version.
+Note: This clones the coturn git repository, obtaining the latest version.
 
 ### Running a container
 
